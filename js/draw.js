@@ -26,7 +26,7 @@ function hpToColor(unit) {
 }
 
 function redrawPlayerInfo() {
-	elm('player_xp').innerHTML = 'xp to next level:<br>' + xpToNextLevel
+	elm('player_xp').innerHTML = 'xp to prev level:<br>' + xpToNextLevel
 	elm('playerLevel').innerHTML = player.name + ' level ' + player.level
 	elm('playerImage').style.color = player.color
 	elm('playerImage').innerHTML = player.string

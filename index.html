@@ -38,7 +38,7 @@
 		<div id = 'spells'></div>
 	</div>
 	<div id = 'menu' style = 'display: block; width: 797px; height:600px; margin-left: auto;margin-right: auto;'>
-		<table width = "797">
+		<table width = "797" style = 'font-family: monospace;'>
 			<tr align = "center">
 				<td><pre>
   _                      _                   _       
@@ -50,16 +50,16 @@
 </pre><script type="text/javascript" language="JavaScript">document.write(version)</script></td>
 			</tr>
 			<tr align = "center">
-				<td><br><input type = "button" style = "width: 270px; height: 75px;" value = "New game" onclick = "startNewGame()"></td>
+				<td><pre onclick = "startNewGame()" style = 'cursor :pointer;'><script type="text/javascript">document.write(drawMenuButton('New game'))</script></pre></td>
 			</tr>
 			<tr align = "center">
-				<td><input type = "button" style = "width: 270px; height: 75px;" value = "Achievements" onclick = "showAchievements()"></td>
+				<td><pre onclick = "showAchievements()" style = 'cursor :pointer;'><script type="text/javascript">document.write(drawMenuButton('Achievements'))</script></pre></td>
 			</tr>
 			<tr align = "center">
-				<td><input type = "button" style = "width: 270px; height: 75px;;" value = "Help" onclick = "showHelp()"></td>
+				<td><pre onclick = "showHelp()" style = 'cursor :pointer;'><script type="text/javascript">document.write(drawMenuButton('Help'))</script></pre></td>
 			</tr>
 			<tr align = "center">
-				<td><input type = "button" style = "width: 270px; height: 75px;" value = "About" onclick = "showAboutInfo()"></td>
+				<td><pre onclick = "showAboutInfo()" style = 'cursor :pointer;'><script type="text/javascript">document.write(drawMenuButton(' About'))</script></pre></td>
 			</tr>
 		</table>
 	</div>

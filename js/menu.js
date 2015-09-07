@@ -36,3 +36,15 @@ function showAboutInfo() {
 	var text = '<br><br>' + gameName + ' ' + version + '<br><br>(c) Yaroslav Zotov aka qiray, 2015<br> for js13kgames'
 	showInfo(text)
 }
+
+function drawMenuButton(label) {
+	var text =
+"/= = = = = = = = = = = = = = = = = = = = =\\\n\
+||                                         ||\n\
+||%label||\n\
+||                                         ||\n\
+\\= = = = = = = = = = = = = = = = = = = = =/"
+	var spaces = 43 - label.length, halfspaces = spaces >> 1, flag = spaces&1
+	console.log(label.length, spaces, flag)
+	return text.replace('%label', Array(halfspaces + (flag? 1 : 0)).join(" ") + label + Array(halfspaces).join(" "))
+}

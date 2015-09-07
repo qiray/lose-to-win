@@ -63,7 +63,7 @@ function decreaseLowscore(value) {
 	var diff = (xpToNextLevel -= value)
 	if (diff <= 0)
 		value = xpToNextLevel
-	pushToTexts(new DisplayedText(0, player.drawx, player.drawy, 'blue', '+' + value + 'xp'))
+	pushToTexts(new DisplayedText(0, player.drawx, player.drawy, 'blue', '-' + value + 'xp'))
 	if (player.level > 0 && xpToNextLevel <= 0) {
 		for (var i in objects)
 			if (objects[i] && (objects[i].type == objectTypes.ThorsHammer || objects[i].type == objectTypes.fireball))
