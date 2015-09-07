@@ -36,13 +36,15 @@ function startWay(map, x, y, obj, maxLen) {
 function win() {
 	saveGame()
 	clearInterval(game_timer)
-	alert('Wow! You\'ve won! Your lowscore is ' + lowscore)
+	showInfo('<br><br><br><h2>Wow! You\'ve won!</h2>Your lowscore is<br>' + lowscore)
+	return
 }
 
 function lose() {
 	saveGame()
 	clearInterval(game_timer)
-	alert('You have failed. Your lowscore is ' + lowscore)
+	showInfo('<br><br><br><h2>You have failed.</h2>Your lowscore is<br>' + lowscore)
+	return
 }
 
 function randomUnit(arr) {
@@ -91,6 +93,7 @@ function generateLevel(map) {
 		} else
 			cells[i] =  randomCell(emptyCells)
 	}
+	notKilledFlag = killed == 0 ? 1 : 0
 	killed = 0
 	currentMap++
 	texts = []

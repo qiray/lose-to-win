@@ -199,7 +199,6 @@ Unit.prototype.move = function() {
 			this.setTarget()
 			return
 		}
-if (units[this.target]) console.log('id = ', this.id, ' dist =', unitsDist(this, units[this.target]))
 		if (this.target != -1 && units[this.target] && unitsDist(this, units[this.target]) <= attackDist) {
 			this.status = statuses.attack
 			this.way = []

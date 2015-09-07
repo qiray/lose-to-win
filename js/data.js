@@ -39,7 +39,7 @@ var basicSpeed = 5
 var levelstartx = 0, levelstarty = 0
 var playerArmor, playerWeapon
 var healPotionProbability = 0.9, weaponProbability = 0.75, armorProbability = 0.75
-var currentMap = 0, killed = 0, totalKilled = 0, castedSpells = 0
+var currentMap = 0, killed = 0, totalKilled = 0, castedSpells = 0, notKilledFlag = 0
 var seeDist = 2, moveDist = 8, attackDist = 1.2
 var gameCounter = 0
 
@@ -273,10 +273,7 @@ var achievements = [
 	{name: 'Exterminatus', have: false, desc: 'Kill 100 enemies', condition: function() { return totalKilled >= 100 }},
 	{name: 'This is only the beginning', have: false, desc: 'Complete 1 level', condition: function() { return currentMap > 0 }},
 	{name: 'Pacifist or coward?', have: false, desc: 'Complete level without any murders', 
-		condition: function() {
-			return killed == 0 && texts.length == 0 && currentMap > 0 //door reached without murders
-		}
-	},
+		condition: function() {	return notKilledFlag && currentMap > 0 }}, //door reached without murders
 	{name: 'That\'s one small step for a man.', have: false, desc: 'Reach 15 level', condition: function() { return player.level <= 15 }},
 	{name: 'One giant leap for mankind.', have: false, desc: 'Reach 10 level', condition: function() { return player.level <= 10 }},
 	{name: 'How?', have: false, desc: 'Reach 5 level', condition: function() { return player.level <= 5 }},
