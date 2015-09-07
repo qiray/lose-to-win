@@ -45,6 +45,5 @@ function drawMenuButton(label) {
 ||                                         ||\n\
 \\= = = = = = = = = = = = = = = = = = = = =/"
 	var spaces = 43 - label.length, halfspaces = spaces >> 1, flag = spaces&1
-	console.log(label.length, spaces, flag)
 	return text.replace('%label', Array(halfspaces + (flag? 1 : 0)).join(" ") + label + Array(halfspaces).join(" "))
 }

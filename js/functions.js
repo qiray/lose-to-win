@@ -11,9 +11,15 @@ function checkAchievements() {
 }
 
 function showMenu() {
-	clearInterval(game_timer)
-	elm('menu').style.display = 'block'
-	elm('game').style.display = 'none'
+	var buttonYes = 
+'+----------------------+\n\
+|         yes          |\n\
++----------------------+'
+	var buttonNo = 
+'+----------------------+\n\
+|          no          |\n\
++----------------------+'
+	showInfo('<br><h2>Are you sure you want to quit?</h2><pre onclick = "elm(\'menu\').style.display = \'block\'; elm(\'game\').style.display = \'none\'">' + buttonYes + '</pre><pre onclick = "hidePopup()">' + buttonNo + '</pre>')
 }
 
 function sqr(val) {
