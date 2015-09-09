@@ -33,7 +33,7 @@ function showHelp(){
 }
 
 function showAboutInfo() {
-	var text = '<br><br>' + gameName + ' ' + version + '<br><br>(c) Yaroslav Zotov aka qiray, 2015<br> for js13kgames'
+	var text = '<br><br>' + gameName + ' ' + version + '<br><br>(c)<br>Yaroslav Zotov aka qiray,<br> Danil Mikhaylov aka Risele, <br>2015<br> for js13kgames'
 	showInfo(text)
 }
 
