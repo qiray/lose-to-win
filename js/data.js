@@ -1,6 +1,3 @@
-/*
-TODO http://javascriptcompressor.com/ - compress javascript
-*/
 
 var version = 'v1.0', gameName = 'Lose to win'
 
