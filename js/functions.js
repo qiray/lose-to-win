@@ -78,7 +78,7 @@ function decreaseLowscore(value) {
 		units[0] = player
 		playerLevel--
 		xpToNextLevel = XPByLevel(player.level)
-		showInfo('<br>Level ' + player.level + ' reached!')
+		showInfo('<br><br><br><br><br><h2>Level ' + player.level + ' reached!</h2>')
 	}	
 	if ((lowscore -= value) < worstLowscore)
 		worstLowscore = lowscore
